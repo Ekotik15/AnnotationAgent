@@ -5,14 +5,13 @@ import os
 from typing import List, Dict, Optional, Union
 from sklearn.metrics import cohen_kappa_score, accuracy_score
 from transformers import pipeline
-import spacy
 from datetime import datetime
 
 class AnnotationAgent:
     """
     Агент для автоматической разметки текстовых данных.
     """
-    def __init__(self, modality: str = 'text', model_name: str = 'facebook/bart-large-mnli'):
+    def __init__(self, modality: str = 'text', model_name: str = 'typeform/distilbert-base-uncased-mnli'):
         """
         Инициализация агента.
         modality: 'text' (пока только текст)
